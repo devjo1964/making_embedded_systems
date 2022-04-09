@@ -1,12 +1,3 @@
-# Week 3 Exercise: Make Blinky
-
-### Board: Texas Instruments EK-TM4C123GXL Tiva C Series LaunchPad
-
-### Build Environment: Keil uVision4 
-
-### Code Snippet: 
-
-```
 //***************************************************************************************
 /*
 Week 3 Exercise: LED Blink with Button
@@ -72,18 +63,3 @@ void PortF_Init(void){
   GPIO_PORTF_PUR_R = 0x11;          // enable pullup resistors on PF4,PF0       
   GPIO_PORTF_DEN_R = 0x1F;          // 7) enable digital pins PF4-PF0        
 }
-```
-
-### Hardware registers that cause LED to turn on/off:
-
-#### pin layout
-![pin layout](pin_layout.png)
-
-#### Register to set the GPIO data after corresponding pins have been configured as outputs through the GPIO Direction register (GPIODIR). Reads from this register also return the pins current state. 
-![GPIO DATA REGISTER](GPIO_Data_register.png)
-
-### Watching value of button value in debug mode:
-#### button pressed
-![Button Pressed](button_pressed.png)
-#### button not pressed
-![Button Not Pressed](button_not_pressed.png)
